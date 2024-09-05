@@ -1,0 +1,15 @@
+.list-item-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0.5em;
+}
+
+.item-links-link {
+    text-decoration: none;
+
+    font-size: 2vw;
+
+    margin: 0 0.5em 0 0.5em;
+}

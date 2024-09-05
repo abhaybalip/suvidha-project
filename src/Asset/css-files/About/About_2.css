@@ -1,0 +1,22 @@
+.about-s2 {
+
+    /* width: 30vw; */
+    border: 1px dashed red;
+}
+
+.about-s2-img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: fill;
+}
+
+/* below 900px - small screen */
+@media (max-width:900px) {
+
+    .about-s2-img{
+        height: 40vw;
+        /* width: auto; */
+    }
+}
+

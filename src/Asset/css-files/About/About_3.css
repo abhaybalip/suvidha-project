@@ -1,0 +1,49 @@
+.about-s3 {
+    width: 100%;
+    height: 30vw;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-s3-img {
+    width: 100%;
+    height: 30vw;
+
+    border: 1px dashed red;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    filter: blur(2px);
+    opacity: 0.75;
+}
+
+.about-s3-txt {
+    font-size: 4vw;
+
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* below 900px - small screen */
+@media (max-width:900px) {
+    .about-s3, .about-s3-img{
+        height: 50vw;
+    }
+    .about-s3-img{
+        filter: blur(3px);
+    }
+
+    .about-s3-txt{
+        font-size: 5vw;
+    }
+}
+
+

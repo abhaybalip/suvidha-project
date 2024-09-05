@@ -1,0 +1,40 @@
+.footer {
+    /* width: 100%; */
+
+    text-align: center;
+    border: 1px solid black;
+
+    font-size: 2vw;
+}
+
+.footer-tag {
+    padding: 1em;
+}
+
+.top-button {
+    height: 5vw;
+    width: 5vw;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 90vh;
+    right: 2.5vw;
+
+    opacity: 0.5;
+
+    z-index: 10;
+
+    cursor: pointer;
+}
+
+@media (max-width:900px) {
+    .top-button {
+        height: 10vw;
+        width: 10vw;
+    }
+}
+
+.router {
+    border: 1px solid black;
+}
