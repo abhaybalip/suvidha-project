@@ -5,11 +5,12 @@
     border: 1px solid black;
 
     font-size: 2vw;
+
+    .footer-tag {
+        padding: 1em;
+    }
 }
 
-.footer-tag {
-    padding: 1em;
-}
 
 .top-button {
     height: 5vw;
@@ -38,3 +39,6 @@
 .router {
     border: 1px solid black;
 }
+
+
+

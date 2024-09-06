@@ -1,0 +1,63 @@
+.sub-s3 {
+
+    width: 100%;
+
+    .sub-s3-t1 {
+        font-size: 3.5vw;
+        text-align: center;
+
+        padding: 0.5em;
+        margin: 0.5em;
+
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+}
+
+.sub-s3-info {
+
+    .s3-info-1 {
+        text-align: justify;
+        text-wrap: pretty;
+
+        .info-1-1 {
+            font-size: 2vw;
+
+            padding: 0.5em;
+            margin: 0.5em;
+        }
+
+        .info-1-2 {
+            font-size: 2vw;
+            font: 400;
+
+            padding: 0.5em;
+            margin: 0.5em;
+        }
+    }
+
+
+
+    .s3-info-2 {
+
+        .info-2-1,
+        .info-2-2,
+        .info-2-3,
+        .info-2-4,
+        .info-2-5 {
+            font: bold;
+            font-size: 2vw;
+
+            padding: 0.25em;
+            margin: 0.25em;
+        }
+
+        .info-2-3-txt,
+        .info-2-5-txt {
+            font-size: 1.5vw;
+
+            padding: 0.25em;
+            margin: 0.25em;
+        }
+    }
+}

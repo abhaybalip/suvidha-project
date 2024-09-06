@@ -9,6 +9,7 @@ import HomePage from './Component/HomePage'
 import Detail from './Component/Detail'
 import Comittee from './Component/Comittee'
 import About from './Component/About'
+import Submission from './Component/Submission'
 
 // css files
 import './Asset/css-files/App_1.css'
@@ -26,7 +27,7 @@ function App() {
     const NavList = [
         { name: 'Home', href: '/', component: HomePage },
         { name: 'Detail', href: '/detail', component: Detail },
-        { name: 'Paper-Submit', href: '/submit' },
+        { name: 'Paper-Submit', href: '/submit', component: Submission },
         { name: 'Tracks', href: '/track' },
         { name: 'Comittee', href: '/comittee', component: Comittee },
         { name: 'About', href: '/about', component: About },

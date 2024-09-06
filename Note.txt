@@ -1,0 +1,9 @@
+
+Normal screen - Small  screen
+
+Header Text : 
+    3.5vw - 3.5vw
+Info text : 
+    2.5 - 3.5
+margin : 
+    0.5em - 1em
