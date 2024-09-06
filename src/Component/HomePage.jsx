@@ -42,11 +42,11 @@ function HomePage(params) {
 
                     <div className='home-s2-row'>
 
-                        <pre className='home-s2-t2'>
+                        <p className='home-s2-t2'>
                             Organisation info
-                        </pre>
+                        </p>
 
-                        <img className='home-s2-img1' alt='project-related-img' src={null}></img>
+                        <img className='home-s2-img1' alt='project-related-img' src={require('../Asset/Image/suvidha-logo.png')}></img>
 
                     </div>
 

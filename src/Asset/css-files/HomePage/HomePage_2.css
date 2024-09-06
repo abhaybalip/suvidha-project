@@ -17,25 +17,23 @@
 /* small screen */
 @media (max-width:900px) {
 
-    .home-s2-row{
-        flex-direction: column;
+    .home-s2-row {
+        /* flex-direction: column; */
     }
 
-    .home-s2-t1{
+    .home-s2-t1 {
         font-size: 5vw;
         margin: 1em;
     }
 
-    .home-s2-t2{
+    .home-s2-t2 {
         font-size: 3.5vw;
-        margin: 1em;
+        margin: 0.5em;
     }
 
-    .home-s2-img1{
+    .home-s2-img1 {
         height: 50vw;
         width: 50vw;
-
-        border-radius: 20%;
     }
 
 }
@@ -57,3 +55,5 @@
 
     margin: 1em;
 }
+
+
