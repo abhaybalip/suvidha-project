@@ -16,7 +16,7 @@ const NavList = [
     { name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
     { name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
     { name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
-    { name: 'Tracks', href: '/track' },
+    { name: 'Tracks', href: '/track', component: React.lazy(() => import('./Component/Track')) },
     { name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
     { name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
 ]

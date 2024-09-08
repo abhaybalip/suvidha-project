@@ -1,0 +1,24 @@
+.trk {
+    width: 100%;
+}
+
+.trk-s1 {}
+
+.trk-s1-t1 {
+    font-size: 2.5vw;
+    text-align: justify;
+    text-wrap: pretty;
+
+    margin: 1em;
+}
+
+.trk-s1-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 1em;
+
+    border: 1px solid black;
+}
