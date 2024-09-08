@@ -1,36 +1,35 @@
 "use client"
 
 // Modules
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Component
-import HomePage from './Component/HomePage'
-import Detail from './Component/Detail'
-import Comittee from './Component/Comittee'
-import About from './Component/About'
-import Submission from './Component/Submission'
+// import HomePage from './Component/HomePage'
+// import Detail from './Component/Detail'
+// import Comittee from './Component/Comittee'
+// import About from './Component/About'
+// import Submission from './Component/Submission'
+import Fallback from './Component/Fallback'
 
 // css files
 import './Asset/css-files/App_1.css'
 import './Asset/css-files/App_2.css'
 import './Asset/css-files/_root.css'
 
-
 function App() {
-
 
     // Handeling Navbar for small device
     const [isNavBarOpen, setIsNavBarOpen] = useState(false)
     const navBarRef = useRef(null)
 
     const NavList = [
-        { name: 'Home', href: '/', component: HomePage },
-        { name: 'Detail', href: '/detail', component: Detail },
-        { name: 'Paper-Submit', href: '/submit', component: Submission },
+        { name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
+        { name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
+        { name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
         { name: 'Tracks', href: '/track' },
-        { name: 'Comittee', href: '/comittee', component: Comittee },
-        { name: 'About', href: '/about', component: About },
+        { name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
+        { name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
     ]
 
     // Loading Screen
@@ -164,20 +163,8 @@ function App() {
     return (
         <div id="app">
 
-            {IsLoading ?
-                <>
-                    <div className='loader' style={{
-                        height: '100vh',
-                        width: '100vw',
+            <Suspense fallback={Fallback}>
 
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-evenly',
-                        alignItems: 'center',
-                    }}>
-                        <img src={require('./Asset/Image/Loading.gif')} alt='loading'></img>
-                    </div>
-                </> :
                 <>
                     {Header()}
 
@@ -198,7 +185,9 @@ function App() {
                     </div>
 
                     {Footer()}
-                </>}
+                </>
+
+            </Suspense>
 
         </div>
     );
