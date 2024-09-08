@@ -20,14 +20,14 @@
     top: 0;
 
     z-index: 5;
+}
 
-    .header-logo {
-        border: 1px solid black;
-        border-radius: 10px;
-    
-        height: 15vw;
-        width: 40%;
-    }
+.header-logo {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    height: 10vw;
+    width: 35%;
 }
 
 .nav-bar {
@@ -86,16 +86,16 @@
 
     .nav-link-small {
         padding: 1em;
-    
+
         text-decoration: none;
         font-size: 1.5em;
-    
+
     }
-    
+
 }
 
 
-/* Below 900 px */
+/* small screen - Below 900 px */
 @media (max-width: 900px) {
 
     .nav-bar {
@@ -119,6 +119,11 @@
         display: none;
     }
 
+    .nav-bar-small {
+        display: none;
+    }
+
 }
+
 
 

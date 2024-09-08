@@ -1,6 +1,6 @@
 .com-panel-item {
     margin: 0.5em;
-    padding: 0.75em;
+    padding: 0.5em;
 
     display: flex;
     flex-direction: row;
@@ -8,12 +8,12 @@
     align-items: center;
 
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .panel-item-img {
-    height: 25vw;
-    width: 25vw;
+    height: 20vw;
+    width: 20vw;
     object-fit: fill;
 
     border: 1px solid black;
@@ -28,15 +28,14 @@
 }
 
 .panel-item-name {
-    font-size: 5vw;
-
-    margin: 0.25em;
+    font-size: 3vw;
+    margin: 0.5em;
 }
 
 .panel-item-post {
-    font-size: 4vw;
+    font-size: 2vw;
 
-    margin: 0.25em;
+    margin: 0.5em;
 }
 
 /* .panel-item-links {
@@ -48,10 +47,10 @@
 
 
 .link-img {
-    height: 5vw;
-    width: 5vw;
+    height: 2vw;
+    width: 2vw;
 
-    margin: 0.25em;
+    margin: 0.5em;
 
     /* border: 1px solid black; */
 }

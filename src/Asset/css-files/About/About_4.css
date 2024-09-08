@@ -9,7 +9,7 @@
 }
 
 .about-s4-t1 {
-    font-size: 5vw;
+    font-size: 2.5vw;
 
     padding: 0.5em;
     margin-top: 0.5em;
@@ -38,7 +38,12 @@
 
 /* below 900px - small screen */
 @media (max-width:900px) {
-    .about-s4-info{
+
+    .about-s4-t1 {
+        font-size: 3.5vw;
+    }
+
+    .about-s4-info {
         flex-direction: column;
         align-items: center;
     }
