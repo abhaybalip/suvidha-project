@@ -1,8 +1,8 @@
 .trk {
     width: 100%;
-}
 
-.trk-s1 {}
+    .trk-s1 {}
+}
 
 .trk-s1-t1 {
     font-size: 2.5vw;
@@ -22,3 +22,13 @@
 
     border: 1px solid black;
 }
+
+/* small screen */
+@media (max-width:900px) {
+    .trk-s1-t1 {
+        font-size: 3.5vw;
+    }
+}
+
+
+
