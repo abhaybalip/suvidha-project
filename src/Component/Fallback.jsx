@@ -1,5 +1,5 @@
 
-const Fallback = () => {
+function Fallback(params) {
     return (
         <div className="fb" style={{
             height: '100vh',
@@ -15,5 +15,5 @@ const Fallback = () => {
         </div>
     )
 }
-export default Fallback
+export default Fallback;
 

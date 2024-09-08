@@ -1,10 +1,7 @@
 
-
 import '../Asset/css-files/Submission/Submission_1.css'
 import '../Asset/css-files/Submission/Submission_2.css'
 import '../Asset/css-files/Submission/Submission_3.css'
-
-
 
 function Submission(params) {
     return (
@@ -178,7 +175,6 @@ const Submission_3 = () => {
 
                 <hr></hr>
 
-
                 <div className='s3-info-2'>
 
                     <div className='info-2-1'>
@@ -192,19 +188,31 @@ const Submission_3 = () => {
                     <div className='info-2-3'>
 
                         <div className='info-2-3-txt'>
-                            US letter (DOC, 30 KB) Updated 2024
+                            <a rel="noreferrer" target='_blank' href='https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-letter.docx'>
+                                US letter
+                            </a>
+                            {" "}(DOC, 30 KB) Updated 2024
                         </div>
 
                         <div className='info-2-3-txt'>
-                            A4 (DOC, 30 KB) Updated 2024 LaTeX Template Instructions (PDF, 63 KB) [Be sure to use the template's conference mode.]
+                            <a rel="noreferrer" target='_blank' href='https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx'>
+                                A4
+                            </a>
+                            {" "}(DOC, 30 KB) Updated 2024 LaTeX Template Instructions (PDF, 63 KB) [Be sure to use the template's conference mode.]
                         </div>
 
                         <div className='info-2-3-txt'>
-                            Template (ZIP, 700 KB) Updated 2024
+                            <a rel="noreferrer" target='_blank' href='https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-latex-template.zip'>
+                                Template
+                            </a>
+                            {" "}(ZIP, 700 KB) Updated 2024
                         </div>
 
                         <div className='info-2-3-txt'>
-                            LaTeX Bibliography Files (ZIP, 309 KB)
+                            <a rel="noreferrer" target='_blank' href='https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/IEEEtranBST2.zip'>
+                                LaTeX Bibliography Files
+                            </a>
+                            {" "}(ZIP, 309 KB)
                         </div>
 
                     </div>
@@ -216,7 +224,10 @@ const Submission_3 = () => {
 
                     <div className='info-2-5'>
                         <div className='info-2-5-txt'>
-                            When working in Overleaf, the template is available at https://www.overleaf.com/gallery/tagged/ieee-official
+                            When working in Overleaf, the template is available at <br></br>
+                            <a rel="noreferrer" target='_blank' href='https://www.overleaf.com/gallery/tagged/ieee-official'>
+                                https://www.overleaf.com/gallery/tagged/ieee-official
+                            </a>
                         </div>
                     </div>
 
@@ -227,4 +238,7 @@ const Submission_3 = () => {
         </div>
     )
 }
+
+
+
 

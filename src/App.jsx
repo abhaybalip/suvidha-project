@@ -4,12 +4,6 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-// Component
-// import HomePage from './Component/HomePage'
-// import Detail from './Component/Detail'
-// import Comittee from './Component/Comittee'
-// import About from './Component/About'
-// import Submission from './Component/Submission'
 import Fallback from './Component/Fallback'
 
 // css files
@@ -17,20 +11,22 @@ import './Asset/css-files/App_1.css'
 import './Asset/css-files/App_2.css'
 import './Asset/css-files/_root.css'
 
+// Nav-bar & component
+const NavList = [
+    { name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
+    { name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
+    { name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
+    { name: 'Tracks', href: '/track' },
+    { name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
+    { name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
+]
+
+
 function App() {
 
     // Handeling Navbar for small device
     const [isNavBarOpen, setIsNavBarOpen] = useState(false)
     const navBarRef = useRef(null)
-
-    const NavList = [
-        { name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
-        { name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
-        { name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
-        { name: 'Tracks', href: '/track' },
-        { name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
-        { name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
-    ]
 
     // Loading Screen
     const [IsLoading, setIsLoading] = useState(true)
@@ -163,37 +159,51 @@ function App() {
     return (
         <div id="app">
 
-            <Suspense fallback={Fallback}>
+            {IsLoading ?
+                <>
+                    <div className='loader' style={{
+                        height: '100vh',
+                        width: '100vw',
 
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                    }}>
+                        <img src={require('./Asset/Image/Loading.gif')} alt='loading'></img>
+                    </div>
+                </> :
                 <>
                     {Header()}
 
                     <div id='router' className='router'>
-                        <BrowserRouter>
-                            <Routes>
-                                {
-                                    NavList.map((value) => {
-                                        if (value.component) {
-                                            return (
-                                                <Route path={value.href} Component={value.component}></Route>
-                                            )
-                                        } else { return null }
-                                    })
-                                }
-                            </Routes>
-                        </BrowserRouter>
+                        <Suspense fallback={Fallback}>
+                            <BrowserRouter>
+                                <Routes>
+                                    {
+                                        NavList.map((value) => {
+                                            if (value.component) {
+                                                return (
+                                                    <Route path={value.href} Component={value.component}></Route>
+                                                )
+                                            } else { return null }
+                                        })
+                                    }
+                                </Routes>
+                            </BrowserRouter>
+                        </Suspense>
                     </div>
 
                     {Footer()}
                 </>
-
-            </Suspense>
+            }
 
         </div>
     );
 };
 
 export default App;
+
 
 
 
