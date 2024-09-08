@@ -45,13 +45,15 @@
         font-size: 2vw;
     }
 }
+
 .header-logo {
-        border: 1px solid black;
-        border-radius: 10px;
-    
-        height: 15vw;
-        width: 40%;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    height: 10vw;
+    width: 40%;
 }
+
 #menu {
     height: 7vw;
     width: 7vw;
@@ -130,6 +132,3 @@
     }
 
 }
-
-
-

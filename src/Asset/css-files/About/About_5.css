@@ -65,10 +65,11 @@
 }
 
 .s4-links-link {
-    height: 5vw;
-    width: 5vw;
+    height: 2.5vw;
+    width: 2.5vw;
 
     border: 1px solid black;
+    border-radius: 50%;
 
     margin: 0 2vw 0 2vw;
 }
@@ -76,8 +77,8 @@
 /* small screen */
 @media (max-width:900px) {
     .s4-links-link {
-        height: 7.5;
-        width: 7.5;
+        height: 7.5vw;
+        width: 7.5vw;
     }
 }
 
