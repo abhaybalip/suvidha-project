@@ -21,7 +21,7 @@ const DateList = [
         ]
     },
     {
-        id: 1,
+        id: 2,
         name: 'Registration',
         info: [
             { t1: 'Start', t2: '9th Aug 2024' },
@@ -35,7 +35,7 @@ const DateList = [
         // ]
     },
     {
-        id: 1,
+        id: 3,
         name: 'Result',
         info: [
             { t1: 'Start', t2: '9th Aug 2024' },
