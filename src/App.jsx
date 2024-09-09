@@ -13,12 +13,12 @@ import './Asset/css-files/_root.css'
 
 // Nav-bar & component
 const NavList = [
-    { name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
-    { name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
-    { name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
-    { name: 'Tracks', href: '/track', component: React.lazy(() => import('./Component/Track')) },
-    { name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
-    { name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
+    { id: 1, name: 'Home', href: '/', component: React.lazy(() => import('./Component/HomePage')) },
+    { id: 2, name: 'Detail', href: '/detail', component: React.lazy(() => import('./Component/Detail')) },
+    { id: 3, name: 'Paper-Submit', href: '/submit', component: React.lazy(() => import('./Component/Submission')) },
+    { id: 4, name: 'Tracks', href: '/track', component: React.lazy(() => import('./Component/Track')) },
+    { id: 5, name: 'Comittee', href: '/comittee', component: React.lazy(() => import('./Component/Comittee')) },
+    { id: 6, name: 'About', href: '/about', component: React.lazy(() => import('./Component/About')) },
 ]
 
 
@@ -184,7 +184,7 @@ function App() {
                                         NavList.map((value) => {
                                             if (value.component) {
                                                 return (
-                                                    <Route path={value.href} Component={value.component}></Route>
+                                                    <Route key={value.id} path={value.href} Component={value.component}></Route>
                                                 )
                                             } else { return null }
                                         })

@@ -1,43 +1,48 @@
 
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react';
+
 import '../Asset/css-files/Testimonial/Testimonial.css'
 
+const ImageData = [
+    { id: 1, src: require('../Asset/Image/Testimonial/01.png') },
+    { id: 2, src: require('../Asset/Image/Testimonial/02.png') },
+    { id: 3, src: require('../Asset/Image/Testimonial/03.png') },
+    { id: 4, src: require('../Asset/Image/Testimonial/04.png') },
+    { id: 5, src: require('../Asset/Image/Testimonial/05.png') },
+    { id: 6, src: require('../Asset/Image/Testimonial/06.png') },
+]
+
 const Testimonial = () => {
-    const image = [
-    ]
+
+    const panelRef = useRef(null)
 
     useEffect(() => {
+        const panel = panelRef.current
 
-        const panel = document.querySelector('.panel-row')
-        if (!panel) return
+        if (ImageData.length > 0 && panel) {
 
-        let imgWidth 
-        let intervalId = null
+            let imgWidth
 
-        const scrollPanel = () => {
-            
-            imgWidth = panel.children[0].clientWidth + 2
-            
-            // make copy of first child node / image
-            const firstImgCopy = panel.firstElementChild.cloneNode(true)
+            const scrollPanel = () => {
+                imgWidth = panel.children[0].clientWidth + 2
 
-            // insert copy at last
-            panel.appendChild(firstImgCopy)
+                // Create a copy of the first child node/image
+                const firstImgCopy = panel.firstElementChild.cloneNode(true)
 
-            // scroll to next image
-            panel.scroll({ left: imgWidth, behavior: 'smooth' })
+                // Append the copy to the end
+                panel.appendChild(firstImgCopy)
 
-            // remove first child
-            panel.removeChild(panel.firstElementChild)
-        }
+                // Scroll to the next image with smooth animation
+                panel.scroll({ left: imgWidth, behavior: 'smooth' })
 
-        intervalId = setInterval(scrollPanel, 1500); // Adjust interval time (3000ms) as needed
-
-        return () => {
-            if (intervalId) {
-                clearInterval(intervalId);
+                // Remove the original first child
+                panel.removeChild(panel.firstElementChild)
             }
+
+            const intervalId = setInterval(scrollPanel, 1500)
+
+            return () => clearInterval(intervalId)
         }
     }, [])
 
@@ -45,21 +50,25 @@ const Testimonial = () => {
         <div className='home-s4'>
             <div className='home-s4-t1'>Testimonial Views</div>
             <div className='home-s4-panel'>
-                {
-                    Image.length > 0 ?
-                        <div id='panel-row' className='panel-row'>
-                            {image.map((value) => (
-                                <div className='panel-row-box'>
-
-
-                                </div>
-                            ))}
-                        </div>
-                        : null
-                }
+                {ImageData.length > 0 && (
+                    <div id='panel-row' className='panel-row' ref={panelRef}>
+                        {ImageData.map((value) => (
+                            <div className='panel-row-box' key={value.id}>
+                                <img
+                                    key={value.id}
+                                    src={value.src}
+                                    alt={value.id}
+                                    className='panel-row-img'
+                                />
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
 };
 
-export default Testimonial;
+export default Testimonial
+
+
