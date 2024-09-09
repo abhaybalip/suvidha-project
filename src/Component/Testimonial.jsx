@@ -20,10 +20,13 @@ const Testimonial = () => {
         const panel = document.querySelector('.panel-row')
         if (!panel) return
 
-        const imgWidth = panel.children[0].clientWidth + 2
+        let imgWidth 
         let intervalId = null
 
         const scrollPanel = () => {
+            
+            imgWidth = panel.children[0].clientWidth + 2
+            
             // make copy of first child node / image
             const firstImgCopy = panel.firstElementChild.cloneNode(true)
 
