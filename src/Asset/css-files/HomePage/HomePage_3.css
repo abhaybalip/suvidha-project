@@ -25,8 +25,8 @@
 }
 
 .home-s3-slider {
-    width: 95%;
-    height: 25vw;
+    width: 65%;
+    height: 20vw;
 
     border: 1px solid black;
     border-radius: 15px;
@@ -62,18 +62,21 @@
 
     border: 1px solid black;
     border-radius: 50%;
-    
-    opacity: 0.75;
+    margin: 0 0.5em 0 0.5em;
+
+    opacity: 0.5;
 
     cursor: pointer;
 }
 
 .home-s3-slider-img{
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
 
     border: 1px solid black;
     border-radius: 10px;
+
+    margin: 0 0.5em 0 0.5em;
 }
 
 
